@@ -31,7 +31,7 @@ document.querySelector("#cleaner").addEventListener("click", () => {
 document.querySelector("#closer").addEventListener("click", () => {
   document.querySelector("#search-input").removeAttribute("data-nextsiblingon")
 })
-fetch('/url.json')
+fetch('https://raw.githubusercontent.com/ToggleKit/config-bp-pps/refs/heads/main/url.json')
   .then(response => response.json())
   .then(data => {
     window.suggestionsData = data;
