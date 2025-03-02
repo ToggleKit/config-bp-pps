@@ -136,20 +136,6 @@ for (let link of asideLinks) {
   })
 }
 
-const sideBarBtn = document.querySelector("div#side-bar-toggle");
-const aside = document.querySelector("aside");
-sideBarBtn.addEventListener("click", () => {
-  sideBarBtn.classList.toggle("rotate");
-  aside.getAttribute('id') ? aside.removeAttribute("id") : aside.setAttribute("id", "show")
-})
-const asideLink = aside.querySelectorAll('a');
-asideLink.forEach(a => {
-  a.addEventListener('click', () => {
-    if (aside.id === 'show') {
-      aside.id = ""
-    }
-  })
-})
 document.querySelectorAll(".copyBTN").forEach(btn=>{
 btn.addEventListener("click", () => {
   const text = btn.closest("pre").querySelector("code").textContent;
