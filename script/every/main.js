@@ -8,7 +8,7 @@ const downloadLink = document.getElementById('downloadLink');
 if(downloadLink){
   downloadLink.addEventListener('click', function(e) {
     e.preventDefault();
-    fetch(this.href)
+    fetch("https://raw.githubusercontent.com/ToggleKit/proposejs/refs/tags/v2.0.1/engine.formatted.js")
       .then(response => response.blob())
       .then(blob => {
         const url = window.URL.createObjectURL(blob);
